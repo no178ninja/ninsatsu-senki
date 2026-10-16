@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#121b1b" />
+    <title>忍札戦記 — 月下の五番勝負</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="mast">
+      <a href="./" aria-label="タイトルへ"
+        >忍札戦記<span>NINSATSU SENKI</span></a
+      ><button id="help">遊び方</button>
+    </header>
+    <main id="app"></main>
+    <dialog id="rules">
+      <div class="dialog-inner">
+        <p class="eyebrow">忍びの心得</p>
+        <h2>一枚が、夜を変える。</h2>
+        <p>
+          全5戦。札をタップして使用し、行動力が尽きたら「ターン終了」。敵の予告に合わせて攻撃と防御を選びます。
+        </p>
+        <ol>
+          <li>
+            毎ターン行動力3、手札5枚。余った手札は捨て札へ。山札が尽きると捨て札を混ぜます。
+          </li>
+          <li>
+            防御で攻撃を軽減。自分の防御は次の自分のターン開始時、敵の防御は次の敵ターン開始時に消えます。
+          </li>
+          <li>
+            毒は持ち主のターン開始時に、防御を無視して数値分のダメージ。その後1減少。弱体中の敵は攻撃が25%減（切り捨て）。筋力は攻撃1回ごとに加算。
+          </li>
+          <li>
+            勝利でHP8回復＋札を1枚獲得。状態異常と筋力は戦闘終了でリセット。5戦目で勝利するとクリア。
+          </li>
+        </ol>
+        <p>
+          操作のたびに自動保存。HP上限40、行動力上限10。途中から再開できます。
+        </p>
+        <button id="close-help" class="primary">心得た</button>
+      </div>
+    </dialog>
+    <div id="announce" class="sr-only" aria-live="polite"></div>
+    <script type="module" src="js/ui.js"></script>
+  </body>
+</html>
